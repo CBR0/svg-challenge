@@ -1,0 +1,26 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1E2234;
+}
+#gauge {
+
+    .linha {
+        // fill: red;
+        stroke: rgb(242, 242, 242);
+        // stroke: red;
+        stroke-width: 1px;
+    }
+    .label {
+        font-size: 8px;
+    }
+    .arco {
+    }
+    .space-gauge {
+        fill: none;
+        stroke: #11141F;
+        stroke-width: 10px;
+        stroke-linecap: round;
+    }
+}

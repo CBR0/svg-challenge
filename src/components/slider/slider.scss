@@ -1,0 +1,66 @@
+.container-svg-slider {
+
+    .svg-background {
+        border: 1px solid rgba(255,255,255,.1);
+        width: 100%;
+    }
+    svg {
+        // margin: 0 auto;
+        // display: block;
+    }
+}
+.container-slider {
+    // border: 1px solid red;
+    // position: relative;
+    // top: -90px;
+
+    .slider {
+        position: absolute;
+        display: flex;
+        width: 40px;
+        height: 65px;
+        border-radius: 50px;
+        text-align: center;
+        background-color: #333853;
+        font-size: 10px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+        cursor: move;
+
+        .drag-area{
+            position: absolute;
+            // border: 1px solid red;
+            height: 100%;
+            width: 100%;
+            display: block;
+        }
+        .debugger-slider {
+            position: fixed;
+            background-color: rgb(173, 73, 73);
+            padding: .5rem;
+            top: 0;
+            left: 0;
+        }
+        .icone-dots {
+            display: flex;
+            flex-wrap: wrap;
+            width: 20px;
+            gap: 3px;
+            margin-bottom: 8px;
+            align-items: center;
+            justify-content: center;
+
+            .dot {
+                display: block;
+                width: 4px;
+                height: 4px;
+                border-radius: 100%;
+                background-color: #121520;
+            }
+        }
+    }
+}

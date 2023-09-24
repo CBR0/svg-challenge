@@ -1,0 +1,61 @@
+<div class="text-slate-200">
+    <div class="container-svg-slider">
+        <!-- Here and below we're using the same pre-defined path -->
+        <svg id="svg-slider" width="0" height="0">
+            <defs>
+                <!-- <path id="gradient-path" d="M36.5,91.2C-7.5,185.5,99.3,224.4,170,203.1c55-16.6,57.8-87.4,1.6-104C71,69.5,9.4,207.7,46,228.6c62.7,35.8,189.7-116,133-211"/> -->
+                <path id="gradient-path" d="
+                    M0 100 L80 100
+
+                    M100 80 A 50 50 0 0 1 200 80
+
+                    M80 100
+                    C80, 100
+                    100 100
+                    100 80
+
+                    M200 80
+                    C200, 80,
+                    200 100
+                    220 100
+
+                    M220 100
+                    500 100
+                    z
+                "></path>
+            </defs>
+        </svg>
+
+        <svg id="svg-background" class="svg-background"  >
+            <defs>
+                <linearGradient id="linear-grad">
+                    <stop offset="0" stop-color="green"/>
+                    <stop offset="0.5" stop-color="yellow"/>
+                    <stop offset="1" stop-color="red"/>
+                </linearGradient>
+            </defs>
+            <use xlink:href="#gradient-path" stroke="url(#linear-grad)" fill="none" stroke-width="8"/>
+        </svg>
+
+    </div>
+    <div class="container-slider">
+        <div class="slider" id="slider">
+            <span id="drag-area" class="drag-area"></span>
+            <div class="icone-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div>
+                <span>18º C</span>
+            </div>
+
+            <span class="debugger-slider">
+                <p id="debugger">x: 0</p>
+            </span>
+        </div>
+    </div>
+</div>
