@@ -26,15 +26,31 @@
             </defs>
         </svg>
 
-        <svg id="svg-background" class="svg-background"  >
+        <svg id="svg-background" class="svg-background">
             <defs>
+                <filter id="blurMe">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+                  </filter>
                 <linearGradient id="linear-grad">
+                    <stop offset="0" stop-color="#1e2234"/>
+                    <stop offset="0.05" stop-color="green"/>
+                    <stop offset="0.5" stop-color="yellow"/>
+                    <stop offset="0.95" stop-color="red"/>
+                    <stop offset="1" stop-color="#1e2234"/>
+                </linearGradient>
+                <linearGradient id="linear-grad-full">
                     <stop offset="0" stop-color="green"/>
                     <stop offset="0.5" stop-color="yellow"/>
                     <stop offset="1" stop-color="red"/>
                 </linearGradient>
             </defs>
-            <use xlink:href="#gradient-path" stroke="url(#linear-grad)" fill="none" stroke-width="8"/>
+            <use
+                xlink:href="#gradient-path"
+                stroke="url(#linear-grad-full)"
+                fill="none" filter="url(#blurMe)"
+                stroke-width="10"
+                style="filter: blur(20px) opacity(0.3);"/>
+            <use xlink:href="#gradient-path" stroke="url(#linear-grad)" fill="none" stroke-width="5"/>
         </svg>
 
     </div>

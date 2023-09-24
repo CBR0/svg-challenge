@@ -3,6 +3,7 @@
     .svg-background {
         border: 1px solid rgba(255,255,255,.1);
         width: 100%;
+        filter: inset drop-shadow(3px 5px 2px rgb(255,255,255));
     }
     svg {
         // margin: 0 auto;
@@ -11,8 +12,8 @@
 }
 .container-slider {
     // border: 1px solid red;
-    // position: relative;
-    // top: -90px;
+    position: relative;
+    top: -90px;
 
     .slider {
         position: absolute;
@@ -30,6 +31,7 @@
         -ms-user-select: none; /* IE 10 and IE 11 */
         user-select: none; /* Standard syntax */
         cursor: move;
+        transform: translateX(70px);
 
         .drag-area{
             position: absolute;
@@ -38,13 +40,13 @@
             width: 100%;
             display: block;
         }
-        .debugger-slider {
-            position: fixed;
-            background-color: rgb(173, 73, 73);
-            padding: .5rem;
-            top: 0;
-            left: 0;
-        }
+        // .debugger-slider {
+        //     position: fixed;
+        //     background-color: rgb(173, 73, 73);
+        //     padding: .5rem;
+        //     top: 0;
+        //     left: 0;
+        // }
         .icone-dots {
             display: flex;
             flex-wrap: wrap;
