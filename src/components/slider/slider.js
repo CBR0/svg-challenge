@@ -36,19 +36,19 @@ function updateSizeSlider() {
     let dString = `
         M0 100 L${xAxis + 20} 100
 
-        M${xAxis + 40} 80 A 50 50 0 0 1 ${xAxis + widthArc} 80
+        M${xAxis + 40} 90 A 20 20 0 0 1 ${xAxis + 90} 90
 
         M${xAxis + 20} 100
         C${xAxis + 20}, 100
         ${xAxis + 40} 100
-        ${xAxis + 40} 80
+        ${xAxis + 40} 90
 
-        M${xAxis + widthArc} 80
-        C${xAxis + widthArc}, 80,
-        ${xAxis + widthArc} 100
-        ${xAxis + widthArc + 20} 100
+        M${xAxis + 90} 90
+        C${xAxis + 90}, 90,
+        ${xAxis + 90} 100
+        ${xAxis + 90 + 20} 100
 
-        M${(xAxis + 160) < sizePage ? (xAxis + 160) : sizePage } 100
+        M${(xAxis + 110) < sizePage ? (xAxis + 110) : sizePage } 100
         ${sizePage} 100
         z
     `;
@@ -63,12 +63,11 @@ function moveSliderMobile() {
     dragArea.ontouchmove = (event) => {
         event.preventDefault();
         var touch = event.targetTouches[0];
-        let axis = touch.pageX - 90;
+        let axis = touch.pageX - 65;
 
         if (axis >= 0 && axis <= (window.innerWidth - widthArc - 40)) {
             xAxis = axis;
             slider.style.left = axis + 'px';
-            debuggerElement.innerText = touch.pageX - 20
         }
 
         updateDebuggers();
@@ -77,5 +76,5 @@ function moveSliderMobile() {
 }
 
 function updateDebuggers() {
-    console.log(xAxis);
+    // console.log(xAxis);
 }

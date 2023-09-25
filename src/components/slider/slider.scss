@@ -1,9 +1,11 @@
 .container-svg-slider {
 
+    .blur-filter {
+        filter: blur(20px) opacity(0.3) drop-shadow(4px 4px #fff)
+    }
     .svg-background {
-        border: 1px solid rgba(255,255,255,.1);
+        height: 104px;
         width: 100%;
-        filter: inset drop-shadow(3px 5px 2px rgb(255,255,255));
     }
     svg {
         // margin: 0 auto;
@@ -13,32 +15,58 @@
 .container-slider {
     // border: 1px solid red;
     position: relative;
-    top: -90px;
+    top: -35px;
 
     .slider {
         position: absolute;
-        display: flex;
+
         width: 40px;
         height: 65px;
-        border-radius: 50px;
-        text-align: center;
-        background-color: #333853;
-        font-size: 10px;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+
+
         -webkit-user-select: none; /* Safari */
         -ms-user-select: none; /* IE 10 and IE 11 */
         user-select: none; /* Standard syntax */
         cursor: move;
-        transform: translateX(70px);
+        z-index: 2;
+        transform: translateX(56px);
+        scale: .8;
 
+        .content-slider{
+            position: relative;
+            z-index: 10;
+            border-radius: 50px;
+            background-color: #333853;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 10px;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background-color: #11141f;
+            opacity: .1;
+            z-index: 1;
+            border-radius: 65px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
         .drag-area{
             position: absolute;
             // border: 1px solid red;
             height: 100%;
             width: 100%;
             display: block;
+            z-index: 15;
         }
         // .debugger-slider {
         //     position: fixed;
