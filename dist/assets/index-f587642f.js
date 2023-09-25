@@ -7,7 +7,7 @@
     <div class="text-right">\r
         <div class="flex items-end justify-end">\r
 \r
-            <img src="./public/images/weather.png" width="30"/>\r
+            <img src="./images/weather.png" width="30"/>\r
             <span class="mt-2 ml-2">21º C</span>\r
         </div>\r
         <p class="text-slate-500 text-sm">Today's weather</p>\r
