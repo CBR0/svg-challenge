@@ -1,12 +1,6 @@
 import "./slider.scss";
 import template from "./slider.html?raw";
 
-// Tamanhos em pixel
-// const config = {
-//     width: 150,
-//     height: 150,
-//     gap: 10
-// };
 var xAxis = 0;
 const yAxis = 100;
 const widthArc = 140;
